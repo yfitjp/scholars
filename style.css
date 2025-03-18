@@ -7,8 +7,8 @@
             --dark-color: #2c3e50;
             --success-color: #2a9d8f;
             --gray-color: #6c757d;
-            --gradient-primary: linear-gradient(135deg, var(--primary-color), #1c3144);
-            --gradient-secondary: linear-gradient(135deg, var(--secondary-color), #3a6b99);
+            --gradient-primary: var(--primary-color);
+            --gradient-secondary: var(--secondary-color);
             --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
             --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12);
@@ -86,7 +86,7 @@
         }
         
         .nav-links li {
-            margin-left: 30px;
+            margin-left: 40px;
         }
         
         .nav-links a {
@@ -97,6 +97,7 @@
             position: relative;
             letter-spacing: 0.5px;
             transition: var(--transition-normal);
+            white-space: nowrap;
         }
         
         .nav-links a:hover, .nav-links a.active {
@@ -1117,9 +1118,9 @@
             color: white;
             text-align: center;
             padding: 80px 20px;
-            background-image: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.9));
             background-size: cover;
             background-position: center;
+            position: relative;
         }
 
         .hero-content {
@@ -1156,7 +1157,7 @@
         .section-divider {
             height: 3px;
             width: 60px;
-            background: var(--gradient-secondary);
+            background: var(--secondary-color);
             margin: 15px auto 0;
             border-radius: 3px;
         }
@@ -1387,6 +1388,7 @@
             padding: 60px 40px;
             border-radius: 8px;
             margin-top: 60px;
+            position: relative;
         }
 
         .cta-section h2 {
@@ -1653,14 +1655,11 @@
             transform: translateY(0);
         }
 
-        /* カラーグラデーション */
+        /* カラーグラデーション削除、単色に変更 */
         .text-gradient {
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--primary-color);
             display: inline-block;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         /* 特別効果 */
@@ -1670,7 +1669,7 @@
             right: 0;
             width: 40%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(36, 123, 160, 0.05));
+            background: rgba(42, 77, 105, 0.05);
             clip-path: polygon(100% 0, 0% 100%, 100% 100%);
             z-index: 0;
         }
@@ -1709,8 +1708,8 @@
         }
         
         .scholar-image, .profile-image, .author-image {
-            background: var(--gradient-primary);
-            opacity: 0.95;
+            background: var(--primary-color);
+            opacity: 1;
         }
         
         /* アニメーションとトランジションの調整 - 目に優しく */
